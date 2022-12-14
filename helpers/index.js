@@ -48,7 +48,7 @@ module.exports = {
     var data = {
       title: this.getTitle(entry.title),
       label: this.getLabelPost(entry.category),
-      thumbnail: this.getLabelPost(entry.media$thumbnail.url),
+      thumbnail: entry.media$thumbnail.url,
       updated: this.getTimes(entry.updated, "en", "LLL"),
       published: this.getTimesAgo(entry.published, "en"),
       content: this.getContentPost(content, json)
@@ -62,7 +62,7 @@ module.exports = {
         id: this.getIdEntry(entry[i].id),
         title: this.getTitle(entry[i].title),
         label: this.getLabelPost(entry[i].category),
-        thumbnail: this.getLabelPost(entry[i].media$thumbnail.url),
+        thumbnail: entry[i].media$thumbnail.url,
         updated: this.getTimesAgo(entry[i].updated, "en"),
         published: this.getTimesAgo(entry[i].published, "en")
       });
